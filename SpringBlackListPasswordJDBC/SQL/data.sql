@@ -1,0 +1,11 @@
+INSERT into blackpassword(password) values ('qwerty007');
+INSERT into blackpassword(password) values ('123456');
+INSERT into blackpassword(password) values ('123456789');
+INSERT into blackpassword(password) values ('picture1');
+INSERT into blackpassword(password) values ('password');
+INSERT into blackpassword(password) values ('abc123');
+INSERT into blackpassword(password) values ('iloveyou');
+INSERT into blackpassword(password) values ('qqww1122');
+INSERT into blackpassword(password) values ('master');
+INSERT into blackpassword(password) values ('hello');
+INSERT into blackpassword(password) values ('renma');

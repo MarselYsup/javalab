@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="SignUpService" class="SignUpService">
+
+    <constructor-arg name="passwordBlackList" ref="passwordBlackListDB"/>
+</bean>
+    <bean id="passwordBlackListDB" class="PasswordBlackListDBImpl">
+        <constructor-arg name="dataSource" ref="HikariDataSource"/>
+    </bean>
+    <bean id="HikariDataSource" class="com.zaxxer.hikari.HikariDataSource">
+        <constructor-arg ref="HikaruConfig"/>
+    </bean>
+    <bean id="HikaruConfig" class="com.zaxxer.hikari.HikariConfig">
+        <property name="driverClassName" value="org.postgresql.Driver"/>
+        <property name="jdbcUrl" value="jdbc:postgresql://localhost:5432/java_home"/>
+        <property name="username" value="postgres"/>
+        <property name="password" value="qwerty007"/>
+    </bean>
+</beans>
